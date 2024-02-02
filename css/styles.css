@@ -16,8 +16,9 @@ body{
 }
 .container{
   position: relative;
-  margin: 120px auto 0 auto;
-  width: 320px;
+  margin: 10% auto 0 auto;
+  max-width: 600px; /* Adjust max-width for responsiveness */
+  width: 90%; /* Set width to a percentage for responsiveness */
 }
 
 
