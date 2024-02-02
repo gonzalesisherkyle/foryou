@@ -1,0 +1,402 @@
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+body{
+  background: url(https://subtlepatterns.com/patterns/noise_lines.png);
+  font-family: 'Pacifico', cursive;
+  overflow: hidden;
+  color: #fff;
+}
+.bgoverlay{
+  background: rgb(103,58,183);
+  background: rgba(103,58,183,0.7);
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+}
+.container{
+  position: relative;
+  margin: 120px auto 0 auto;
+  width: 320px;
+}
+
+
+.ico{
+  display: block;
+  width: 320px;
+  height: 320px;
+}
+.open .ico{
+  animation: open 4s;
+  transform: scale(10);
+}
+.ico .title{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -95px;
+  margin-top: -73px;
+  z-index: 4;
+  font-size: 50px;
+  font-family: 'Pacifico', cursive;
+  color: #fff;
+  cursor: pointer;
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+.open .ico .title{
+  opacity: 0;
+  transition: all 0.3s ease;
+  top:-100px;
+}
+.ico:before,
+.ico:after,
+.ico2:before,
+.ico2:after{
+  position: absolute;
+  top:0;
+  left:0;
+}
+.ico:before,
+.ico:after,
+.ico2:before,
+.ico2:after{
+  display: block;
+  font-size: 20em;
+  color: #ff4081;
+  content: "\f004";
+  font-family: FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.ico2:before,
+.ico2:after{
+  color: #e91e63;
+}
+.ico:before{
+  z-index: 3;
+}
+.ico:after{
+  animation: explode 4s infinite;
+}
+
+
+.ico2:before{
+  animation: explodeSmall 3s infinite;
+}
+.ico2:after{
+  animation: explodeSmall 2s infinite;
+}
+
+
+.endtext{
+  opacity:0;
+  position: absolute;
+  top:-100px;
+  width:100%;
+}
+.open .endtext{
+  top:0;
+  opacity: 1;
+  animation: show 5s;
+}
+.endtext .close{
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+.endtext h1,
+.endtext h2,
+.endtext h3{
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+  text-align: center;
+  font-weight: normal;
+}
+.endtext h1{
+  font-size: 75px;
+}
+.endtext h2{
+  font-size: 30px;
+}
+.endtext h3{
+  font-size: 20px;
+}
+
+
+@keyframes explode {
+    from {
+      transform: scale(1);
+      opacity: 1;
+    }
+    to {
+      transform: scale(1.6);
+      opacity: 0;
+    }
+}
+@keyframes explodeSmall {
+    from {
+      transform: scale(1);
+      opacity: 1;
+    }
+    to {
+      transform: scale(1.2);
+      opacity: 0;
+    }
+}
+
+
+@keyframes open {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(10);
+    }
+}
+
+@keyframes show {
+    from {
+      opacity: 0;
+      top: -100px;
+    }
+    to {
+      opacity: 1;
+      top:0;
+    }
+}
+
+.pikachu{
+  top: auto; 
+  height: 65%;
+  width: 140px;
+}
+
+.pikachu::before {
+  position: absolute;
+	content: '';
+	background: rgba(0,0,0,0.15);
+	height: 10px;
+	width: 90%;
+	margin: auto;
+	left: 0;
+	right: 0;
+	bottom: 95px;
+	border-radius: 50%;
+}
+
+.pikachu .head {
+  bottom: auto; 
+  height: 120px;
+  width: 120px;
+  z-index: 3;
+}
+
+.pikachu .head .face{
+  width: 120px;
+  height: 70px;
+  top: auto;
+  border-radius:  40px 40px 30px 30px; 
+  z-index: 2;
+}
+
+.face .eye {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  bottom: auto;
+  top: 28px;
+  -webkit-animation: blink 4s infinite; 
+}
+
+
+.eye.left {
+  right: auto;
+  left: 32px;
+}
+
+.eye.right {
+  left: auto;
+  right: 32px;
+}
+
+.face .mouth {
+  text-align: center;
+  height: 10px;
+}
+
+.face .cachete {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  bottom: auto;
+  top: 38px;
+  background-color: #e64900;
+  z-index: 9;
+}
+
+.cachete.left {
+  right: auto;
+  left: 10px;
+}
+
+.cachete.right {
+  left: auto;
+  right: 10px;
+}
+
+
+.pikachu .head .ears{
+  width: 20px;
+  height: 90px;
+  bottom: auto;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.ears.left{
+  right: auto; 
+  left: 10px;
+}
+
+.ears.right{
+  left: auto; 
+  right: 10px;
+}
+
+.ears .ears-inside{
+  top: auto; 
+  height: 70px;
+  width: 30px;
+  border-radius: 50%;
+}
+
+.ears.right .ears-inside{
+  position: absolute; 
+	left: -50%;
+}
+
+.pikachu .body {
+  bottom: auto;
+  top: 80px;
+  height: 105px;
+  width: 130px;
+  border-radius: 80px 80px 40px 40px;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.pikachu .body .paw{
+  bottom: auto; 
+  top: 50px; 
+  height: 15px; 
+  width: 30px; 
+  z-index: 9; 
+  border-bottom: 1px solid #e0a100; 
+  border-top: 1px solid #FFFFFF;
+}
+
+.pikachu .body .paw.left{
+  right: auto;
+  left: 15px;
+  border-radius: 0 50% 50% 0;  
+}
+
+.pikachu .body .paw.right{
+  left: auto;
+  right: 15px;
+  border-radius: 50% 0 0 50%;  
+}
+
+.pikachu .body .heart {
+    width: 40px;
+    height: 40px;
+    bottom: auto;
+    top: 10px; 
+    z-index: 8;
+    animation:beat 0.45s infinite;
+    -webkit-animation:beat 0.45s infinite;
+}
+
+.pikachu .body .heart:before,
+.pikachu .body .heart:after {
+    position: absolute;
+    content: "";
+    left: 20px;
+    top: 30px;
+    width: 50%;
+    height: 100%;
+    background: #e64900;
+    -moz-border-radius: 20px 20px 0 0;
+    border-radius: 10px 10px 0 0;
+    -webkit-transform: rotate(-45deg);
+       -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+         -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+       -moz-transform-origin: 0 100%;
+        -ms-transform-origin: 0 100%;
+         -o-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+}
+.pikachu .body .heart:after {
+    left: 0px;
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+       -moz-transform-origin: 100% 100%;
+        -ms-transform-origin: 100% 100%;
+         -o-transform-origin: 100% 100%;
+            transform-origin :100% 100%;
+}
+
+.pikachu .leg {
+  z-index: 1; 
+  bottom: auto;
+  top: 172px;
+  height: 20px;
+  width: 30px;
+}
+
+.pikachu .leg.left {
+  right: auto; 
+  left: 20px;
+  border-radius: 80px 10px 80px 10px;
+}
+
+.pikachu .leg.right {
+  left: auto; 
+  right: 20px;
+  border-radius: 10px 80px 10px 80px;
+}
+
+.pikachu .tail {
+  z-index: 1;
+  height: 40px; 
+  width: 50px; 
+  left:auto;
+  bottom: auto; 
+  top: 70px;
+  border-radius: 10% 30%;
+}
+
+div, ul, span{
+  display: flex; 
+  position: absolute;
+  margin: auto; 
+  padding: 0;
+  top: 0; 
+  bottom: 0; 
+  right: 0; 
+  left: 0;
+}
+
+.brown { background-color: #452211;}
+.yellow { background-color: #ffd814}
+.yellow-dark { background-color: #e0a100}
